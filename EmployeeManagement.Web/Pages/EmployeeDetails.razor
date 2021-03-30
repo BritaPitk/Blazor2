@@ -1,6 +1,14 @@
 ﻿@page "/employeedetails/{Id}"
+@page "/employeedetails"
 @inherits EmployeeDetailsBase
-<h3>EmployeeDetails</h3>
+
+@if (Employee == null || Employee.Department == null)
+{
+    <div class="spinner"></div>
+}
+else
+
+}
 
 <div class="row justify-content-center m-3">
     <div class="col-sm-8">
@@ -14,7 +22,7 @@
 
                 <h4>Employee ID : @Employee.EmployeeId</h4>
                 <h4>Email : @Employee.Email</h4>
-                <h4>Department : @Employee.DepartmentId</h4>
+                <h4>Department : @Employee.Department.DepartmentName</h4>
             </div>
             <div class="card-footer text-center">
                 <a href="/" class="btn btn-primary">Back</a>
