@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagement.Models",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagement.Web", "EmployeeManagement.Web\EmployeeManagement.Web.csproj", "{D10BF0FD-5D16-4830-9750-CCB3B01F61E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.Api", "..\..\Users\brita\Documents\dev\BlazorApp\EmployeeManagement.Api\EmployeeManagement.Api.csproj", "{FF09D012-D766-49D0-8B68-31F7901BFEDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagement.Api", "..\..\Users\brita\Documents\dev\BlazorApp\EmployeeManagement.Api\EmployeeManagement.Api.csproj", "{FF09D012-D766-49D0-8B68-31F7901BFEDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
