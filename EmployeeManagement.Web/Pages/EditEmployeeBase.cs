@@ -16,12 +16,19 @@ namespace EmployeeManagement.Web.Pages
 
         public Employee Employee { get; set; } = new Employee();
 
+        [Inject]
+        public IDepartmentService DepartmentService { get; set; }
+
+        public List<Department> Departments { get; set; } = new List<Department>();
+
+        
         [Parameter]
         public string Id { get; set; }
-
         protected async override Task OnInitializedAsync()
         {
             Employee = await EmployeeService.GetEmployee(int.Parse(Id));
+            Departments = (await DepartmentService.GetDepartments()).ToList();
+           
         }
     }
 }
