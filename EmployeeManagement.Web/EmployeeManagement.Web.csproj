@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EmployeeManagement.Models\EmployeeManagement.Models.csproj" />
+    <ProjectReference Include="..\PragimTechComponents\PragimTechComponents.csproj" />
   </ItemGroup>
 
 </Project>
