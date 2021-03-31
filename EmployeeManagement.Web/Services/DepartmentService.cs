@@ -24,5 +24,8 @@ namespace EmployeeManagement.Web.Services
         {
             return await httpClient.GetJsonAsync<Department[]>("api/departments");
         }
+
     }
+
 }
+
