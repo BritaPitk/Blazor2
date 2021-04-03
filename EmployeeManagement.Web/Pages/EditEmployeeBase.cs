@@ -15,6 +15,8 @@ namespace EmployeeManagement.Web.Pages
         [Inject]
         public IEmployeeService EmployeeService { get; set; }
 
+        public string PageHeader { get; set; }
+
         private Employee Employee { get; set; } = new Employee();
 
         public EditEmployeeModel EditEmployeeModel { get; set; } =
@@ -41,10 +43,12 @@ namespace EmployeeManagement.Web.Pages
 
             if (employeeId != 0)
             {
+                PageHeader = "Edit Employee";
                 Employee = await EmployeeService.GetEmployee(int.Parse(Id));
             }
             else
             {
+                PageHeader = "Create Employee";
                 Employee = new Employee
                 {
                     DepartmentId = 1,
@@ -75,6 +79,11 @@ namespace EmployeeManagement.Web.Pages
             {
                 NavigationManager.NavigateTo("/");
             }
+        }
+        protected async Task Delete_Click()
+        {
+            await EmployeeService.DeleteEmployee(Employee.EmployeeId);
+            NavigationManager.NavigateTo("/");
         }
     }
 }
