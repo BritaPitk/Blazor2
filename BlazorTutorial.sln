@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagement.Web", "E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagement.Api", "..\..\Users\brita\Documents\dev\BlazorApp\EmployeeManagement.Api\EmployeeManagement.Api.csproj", "{FF09D012-D766-49D0-8B68-31F7901BFEDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PragimTechComponents", "PragimTechComponents\PragimTechComponents.csproj", "{0532A612-0B85-48EB-8CE8-25EBB6BEF743}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PragimTechComponents", "PragimTechComponents\PragimTechComponents.csproj", "{0532A612-0B85-48EB-8CE8-25EBB6BEF743}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
