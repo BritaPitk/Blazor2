@@ -1,4 +1,4 @@
-﻿using AutoMapper
+﻿using AutoMapper;
 using EmployeeManagement.Models;
 using EmployeeManagement.Web.Models;
 using EmployeeManagement.Web.Services;
@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EmployeeManagement.Web.Pages;
 
 namespace EmployeeManagement.Web.Pages
 {
@@ -81,7 +82,7 @@ namespace EmployeeManagement.Web.Pages
             }
         }
 
-        protected PragimTech.Components.ConfirmBase DeleteConfirmation { get; set; }
+        protected PragimTechComponents.ConfirmBase DeleteConfirmation { get; set; }
 
         protected void Delete_Click()
         {
@@ -96,5 +97,7 @@ namespace EmployeeManagement.Web.Pages
                 await OnEmployeeDeleted.InvokeAsync(Employee.EmployeeId);
             }
         }
+
     }
 }
+
