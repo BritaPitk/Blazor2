@@ -3,6 +3,7 @@
 using EmployeeManagement.Models;
 using EmployeeManagement.Web.Services;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,9 @@ namespace EmployeeManagement.Web.Pages
     public class EmployeeListBase : ComponentBase
 
     {
+        [CascadingParameter]
+        private Task<AuthenticationState> authenticationStateTask { get; set; }
+
         [Inject]
         public IEmployeeService EmployeeService { get; set; }
 

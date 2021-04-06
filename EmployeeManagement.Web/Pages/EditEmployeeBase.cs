@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EmployeeManagement.Web.Pages;
+using System.Net;
 
 namespace EmployeeManagement.Web.Pages
 {
@@ -40,6 +41,15 @@ namespace EmployeeManagement.Web.Pages
 
         protected async override Task OnInitializedAsync()
         {
+            var authenticationState = await authenticationStateTask;
+
+            if (!authenticationState.User.Identity.IsAuthenticated)
+            {
+                string returnUrl = WebUtility.UrlEncode($"/editEmployee/{Id}");
+                NavigationManager.NavigateTo($"/identity/account/login?returnUrl={returnUrl}");
+            }
+
+
             int.TryParse(Id, out int employeeId);
 
             if (employeeId != 0)
