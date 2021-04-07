@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using EmployeeManagement.Web.Pages;
 using System.Net;
+using Microsoft.AspNetCore.Components.Authorization;
 
 namespace EmployeeManagement.Web.Pages
 {
@@ -16,6 +17,9 @@ namespace EmployeeManagement.Web.Pages
     {
         [Inject]
         public IEmployeeService EmployeeService { get; set; }
+
+        [CascadingParameter]
+        private Task<AuthenticationState> authenticationStateTask { get; set; }
 
         public string PageHeader { get; set; }
 
@@ -104,7 +108,7 @@ namespace EmployeeManagement.Web.Pages
             if (deleteConfirmed)
             {
                 await EmployeeService.DeleteEmployee(Employee.EmployeeId);
-                await OnEmployeeDeleted.InvokeAsync(Employee.EmployeeId);
+                NavigationManager.NavigateTo("/");
             }
         }
 
